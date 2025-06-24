@@ -10,6 +10,13 @@ application's config, use `stow <app>`. To install all applications' config, use
 
 The current supported apps are:
 
+- `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration  
+  Requires:
+  - [fzf](https://github.com/junegunn/fzf)
+
+  Depends-on:
+  - `starship`
+  - `shell`
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)
