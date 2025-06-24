@@ -18,6 +18,7 @@ The current supported apps are:
   - `starship`
   - `shell`
 - `bat`: [bat](https://github.com/sharkdp/bat) configuration
+- `clangd`: [clangd](https://clangd.llvm.org/) configuration
 - `shell`: generic shell configuration (environment variables/aliases)  
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
