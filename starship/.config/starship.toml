@@ -1,0 +1,149 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+[╭─](fg:#0a7aca)\
+[    ](bg:#0a7aca fg:#1E1E1E)\
+$sudo\
+$python\
+[\u0008 ](bg:#444444 fg:#0a7aca)\
+[](bg:#303030 fg:#444444)\
+$directory\
+[](bg:#242424 fg:#303030)\
+$git_branch$git_commit$git_state$git_status\
+[](fg:#242424)\
+$fill\
+[](fg:#303030)\
+$cmd_duration\
+[](fg:#0a7aca bg:#303030)\
+$battery\
+[](fg:#0a7aca)\
+$line_break\
+[╰─](fg:#0a7aca)\
+$character"""
+
+# username@hostname format: $username$hostname( \\($localip\\))
+[username]
+style_user = 'fg:#e3e5e5 bg:#769ff0'
+style_root = 'fg:#fdbc4b bg:#769ff0'
+format = '[ $user]($style)'
+#show_always = true
+
+[hostname]
+#ssh_only = false
+style = 'fg:#e3e5e5 bg:#769ff0'
+format = '[@$hostname]($style)'
+
+[directory]
+style = 'fg:#dee1e6 bg:#303030'
+format = '[ $path( $read_only) ]($style)'
+truncation_symbol = '  '
+home_symbol = ' '
+read_only = ''
+
+[directory.substitutions]
+" /Descargas" = ' '
+" /Documentos/Programming" = ' '
+" /Documentos" = '󰈙'
+" /Música" = ' '
+" /Imágenes" = ' '
+" /Vídeos" = ' '
+" /" = '/'
+" /" = '/'
+" /" = '/'
+" /" = '/'
+" /" = '/'
+" /" = '/'
+'/' = '  '
+
+[git_branch]
+style = 'fg:#626262 bg:#242424'
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+
+[git_commit]
+style = 'fg:#626262 bg:#242424'
+format = '[  \($hash$tag\) ]($style)'
+tag_disabled = false
+tag_symbol = '  '
+
+[git_state]
+style = 'fg:#626262 bg:#242424'
+format = '[\($state( $progress_current/$progress_total)\) ]($style)'
+merge = ''
+rebase = ''
+cherry_pick = ''
+revert = ' '
+
+[git_status]
+style = 'fg:#626262 bg:#242424'
+format = '([\[$ahead_behind(|( ( $conflicted)( $untracked)( $modified)( $renamed)( $deleted))(  $staged) )\]]($style))'
+conflicted = '[=$count](bg:#242424 fg:#C50F1F)'
+ahead = '[↑$count](bg:#242424 fg:#881798)'
+behind = '[↓$count](bg:#242424 fg:#C50F1F)'
+diverged = '[↑$ahead_count](bg:#242424 fg:#881798) [↓$behind_count](bg:#242424 fg:#C50F1F)'
+up_to_date = '[≡](bg:#242424 fg:#13A10E)'
+untracked = '?$count'
+modified = '[~$count](bg:#242424 fg:#C19C00)'
+staged = '[+$count](bg:#242424 fg:#13A10E)'
+renamed = '[→$count](bg:#242424 fg:#C19C00)'
+deleted = '[-$count](bg:#242424 fg:#C50F1F)'
+
+[python]
+style = 'fg:#fdbc4b bg:#0a7aca'
+format = '[$symbol]($style)'
+version_format = '$major.$minor'
+symbol = '󰌠  '
+detect_extensions = []
+detect_files = []
+
+[fill]
+symbol = ' '
+
+[cmd_duration]
+style = 'fg:#569cd6 bg:#303030'
+format = '[󰔛 $duration ]($style)'
+
+[sudo]
+style = 'fg:#fdbc4b bg:#0a7aca'
+format = '[$symbol ]($style)'
+symbol = '󱐋'
+disabled = false
+
+[battery]
+format = '[$symbol$percentage]($style)'
+full_symbol = '  '
+unknown_symbol = '  '
+empty_symbol = '  '
+
+[[battery.display]]
+threshold = 5
+style = 'fg:#C50F1F bg:#0a7aca'
+discharging_symbol = '  '
+charging_symbol = '  [󱐋](fg:#fdbc4b bg:#0a7aca)'
+
+[[battery.display]]
+threshold = 35
+style = 'fg:#fdbc4b bg:#0a7aca'
+discharging_symbol = '  '
+charging_symbol = '  [󱐋](#fdbc4b bg:#0a7aca)'
+
+[[battery.display]]
+threshold = 65
+style = 'fg:#303030 bg:#0a7aca'
+discharging_symbol = '  '
+charging_symbol = '  [󱐋](#fdbc4b bg:#0a7aca)'
+
+[[battery.display]]
+threshold = 95
+style = 'fg:#303030 bg:#0a7aca'
+discharging_symbol = '  '
+charging_symbol = '  [󱐋](#fdbc4b bg:#0a7aca)'
+
+[[battery.display]]
+threshold = 100
+style = 'fg:#13A10E bg:#0a7aca'
+discharging_symbol = '  '
+charging_symbol = '  [󱐋](#fdbc4b bg:#0a7aca)'

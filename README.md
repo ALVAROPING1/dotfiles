@@ -24,6 +24,7 @@ The current supported apps are:
   - [eza](https://github.com/eza-community/eza)
   - [dust](https://github.com/bootandy/dust)
   - [dysk](https://github.com/Canop/dysk)
+- `starship`: [starship](https://starship.rs/) configuration
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)
