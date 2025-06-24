@@ -17,6 +17,13 @@ The current supported apps are:
   Depends-on:
   - `starship`
   - `shell`
+- `shell`: generic shell configuration (environment variables/aliases)  
+  Requires (coreutils replacements):
+  - [batcat](https://github.com/sharkdp/bat)
+  - [delta](https://github.com/dandavison/delta)
+  - [eza](https://github.com/eza-community/eza)
+  - [dust](https://github.com/bootandy/dust)
+  - [dysk](https://github.com/Canop/dysk)
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)

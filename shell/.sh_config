@@ -1,0 +1,106 @@
+#!/bin/sh
+
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║                                  ALIASES                                   ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
+
+alias ls="eza --color --icons --group-directories-first --hyperlink -h"
+alias dir="dir --color=auto"
+alias vdir="vdir --color=auto"
+
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+alias cd="cd >/dev/null" # Don't print folder from cdablevars
+
+# Some more ls aliases
+alias ll="ls --all --long --smart-group --git"
+alias la="ls --all"
+
+# Quit aliases
+alias :q="exit"
+alias q="exit"
+
+# cd parent
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# General aliases
+alias mpv="flatpak run io.mpv.Mpv"
+alias du="dust -rx"
+alias diff="delta"
+alias treesize="du"
+alias df="dysk --units=binary"
+alias tree="ls --tree --level 2"
+alias cat="bat --set-terminal-title"
+alias bathelp="bat --plain --language=help"
+alias vim="nvim.appimage"
+alias fd=fdfind
+alias lg=lazygit
+alias autoclick="xdotool click --repeat 10000 --delay 500 1"
+alias latexmk="latexmk --output-directory=build -cd -shell-escape -pdflua"
+
+# Bat commands
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+batshow() {
+    git show "$1" | bat -l "$2"
+}
+
+# Hack to make (snap) btop use the default config directory
+# as it can't access the XDG_CONFIG_HOME directly
+alias btop='XDG_CONFIG_HOME=$HOME/snap/btop/current/.config/ btop'
+
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║                                    PATH                                    ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
+
+export PATH=~/.local/opt/ghdl/bin/:$PATH # Append `ghdl` binary path
+
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║                           ENVIRONMENT VARIABLES                            ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
+
+# Rust toolchain
+export RUSTUP_HOME="${XDG_CONFIG_HOME}/rustup"
+export CARGO_HOME="${XDG_CONFIG_HOME}/cargo"
+
+if [ -f $CARGO_HOME/env ]; then
+    . $CARGO_HOME/env
+fi
+
+# Folder aliases
+export downloads=~/Descargas
+export documents=~/Documentos
+export pictures=~/Imágenes
+export videos=~/Vídeos
+
+# Use bat as the man pager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# GPG
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export KEYID="0x481282278CCB8230"
+gpg-connect-agent updatestartuptty /bye > /dev/null
+restart-gpg-agent() {
+    gpgconf --kill gpg-agent
+    gpg-connect-agent updatestartuptty /bye
+    gpgconf --launch gpg-agent
+}
+alias gpg-change-key='gpg-connect-agent "scd serialno" "learn --force" /bye'
+
+# fzf
+export FZF_DEFAULT_COMMAND="fdfind --type f --strip-cwd-prefix"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+export FZF_DEFAULT_OPTS='
+  --bind up:preview-up,down:preview-down
+  --color=bg+:#004B72,hl:#18A2FE,hl+:#18A2FE,info:#707070
+  --color=prompt:#19cb00,pointer:#d7005f,marker:#87ff00
+  --prompt="❯ " --pointer="❯"
+'
