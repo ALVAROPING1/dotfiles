@@ -22,6 +22,7 @@ The current supported apps are:
 - `fastfetch`: [fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration
 - `kitty`: [Kitty](https://sw.kovidgoyal.net/kitty/) configuration
 - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration
+- `mpv`: [mpv](https://mpv.io/) configuration
 - `shell`: generic shell configuration (environment variables/aliases)  
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
