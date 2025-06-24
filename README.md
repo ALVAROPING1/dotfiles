@@ -19,6 +19,7 @@ The current supported apps are:
   - `shell`
 - `bat`: [bat](https://github.com/sharkdp/bat) configuration
 - `clangd`: [clangd](https://clangd.llvm.org/) configuration
+- `fastfetch`: [fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration
 - `shell`: generic shell configuration (environment variables/aliases)  
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
