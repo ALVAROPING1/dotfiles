@@ -23,6 +23,7 @@ The current supported apps are:
 - `kitty`: [Kitty](https://sw.kovidgoyal.net/kitty/) configuration
 - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration
 - `mpv`: [mpv](https://mpv.io/) configuration
+- `nvim`: [Neovim](https://neovim.io/) configuration
 - `shell`: generic shell configuration (environment variables/aliases)  
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
