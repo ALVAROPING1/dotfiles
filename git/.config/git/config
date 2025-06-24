@@ -1,0 +1,60 @@
+# Este es el archivo de configuración de Git por usuario.
+[include]
+    path = user
+
+[alias]
+    graph = log --graph --oneline
+
+[pull]
+    ff = only
+
+[credential]
+    helper = cache --timeout 3600
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    # General
+    hiperlinks = true
+    #hyperlinks-file-link-format = "file-line://{path}:{line}"
+    side-by-side = true
+    line-numbers = true
+    navigate = true
+    dark = true
+    wrap-max-lines = unlimited
+
+    syntax-theme = OneHalfDark
+
+    # Blame
+    blame-format = "{timestamp:<15} {author:^15.15} {commit:<8} "
+    blame-palette = "#101010 #002800 #000028 #202000 #280000 #202020"
+
+    # Commit
+    commit-decoration-style = bold "#13A10E" box ul
+
+    # File
+    file-decoration-style = blue ul ol
+    file-modified-label = [Δ]
+    file-removed-label = [-]
+    file-added-label = [+]
+    file-renamed-label = [->]
+    right-arrow = " -> "
+
+    # Line numbers
+    line-numbers-zero-style = "#808080"
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[rebase]
+    updateRefs = true
+
+[init]
+    defaultBranch = master
