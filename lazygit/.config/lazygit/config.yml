@@ -1,0 +1,16 @@
+gui:
+  scrollPastBottom: false
+  showFileTree: false
+  showNumstatInFilesView: true
+  showCommandLog: false
+  showPanelJumps: false
+  nerdFontsVersion: "3"
+  spinner:
+    frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+    rate: 75
+  statusPanelView: allBranchesLog
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
