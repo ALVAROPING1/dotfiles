@@ -9,3 +9,12 @@ application's config, use `stow <app>`. To install all applications' config, use
 `stow */`
 
 The current supported apps are:
+
+- `zsh`: [Z-shell](https://www.zsh.org/) configuration  
+  Requires:
+  - [fzf](https://github.com/junegunn/fzf)
+  - [eza](https://github.com/eza-community/eza)
+
+  Depends-on:
+  - `starship`
+  - `shell`
