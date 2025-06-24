@@ -17,6 +17,7 @@ The current supported apps are:
   Depends-on:
   - `starship`
   - `shell`
+- `bat`: [bat](https://github.com/sharkdp/bat) configuration
 - `shell`: generic shell configuration (environment variables/aliases)  
   Requires (coreutils replacements):
   - [batcat](https://github.com/sharkdp/bat)
