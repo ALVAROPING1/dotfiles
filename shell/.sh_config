@@ -12,8 +12,6 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias cd="cd >/dev/null" # Don't print folder from cdablevars
-
 # Some more ls aliases
 alias ll="ls --all --long --smart-group --git"
 alias la="ls --all"
@@ -72,12 +70,6 @@ export CARGO_HOME="${XDG_CONFIG_HOME}/cargo"
 if [ -f $CARGO_HOME/env ]; then
     . $CARGO_HOME/env
 fi
-
-# Folder aliases
-export downloads=~/Descargas
-export documents=~/Documentos
-export pictures=~/Imágenes
-export videos=~/Vídeos
 
 # Use bat as the man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

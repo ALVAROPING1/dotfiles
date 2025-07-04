@@ -132,6 +132,14 @@ set -o vi # Vim bindings
 shopt -s cdable_vars
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 
+# Folder aliases
+export downloads=~/Descargas
+export documents=~/Documentos
+export pictures=~/Imágenes
+export videos=~/Vídeos
+
+alias cd="cd >/dev/null" # Don't print folder from cdablevars
+
 # Shell integrations
 
 # fzf

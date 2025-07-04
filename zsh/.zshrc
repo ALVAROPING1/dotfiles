@@ -65,7 +65,7 @@ zstyle ':completion:*' menu no  # no default menu (use fzf)
 zstyle ':completion:*:descriptions' format '[%d]' # show completion groups with colors
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --group-directories-first --icons=auto --color=always $realpath'  # fzf for cd w/ eza
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
-# zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --group-directories-first --icons=auto --color=always $realpath'  # fzf for zoxide
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --group-directories-first --icons=auto --color=always $realpath'  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
 zstyle ':fzf-tab:*' accept-line enter
 zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
@@ -93,7 +93,12 @@ setopt hist_ignore_all_dups # Don't save duplicate commands
 setopt hist_save_no_dups # Don't save duplicate commands
 setopt hist_ignore_dups # Don't save duplicate commands
 setopt hist_find_no_dups # Don't show duplicates in history search
-setopt cdablevars
+
+# Add home folder directories aliases
+alias -g downloads=~/Descargas
+alias -g documents=~/Documentos
+alias -g pictures=~/Imágenes
+alias -g videos=~/Vídeos
 
 # Generic shell config
 if [ -f ~/.sh_config ]; then
@@ -122,4 +127,9 @@ fi
 # Fastfetch
 if [ -x "$(command -v fastfetch)" ]; then
     fastfetch
+fi
+
+# zoxide
+if [ -x "$(command -v zoxide)" ]; then
+    eval "$(zoxide init --cmd cd zsh)"
 fi
