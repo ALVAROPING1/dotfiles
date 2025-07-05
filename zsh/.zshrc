@@ -131,5 +131,14 @@ fi
 
 # zoxide
 if [ -x "$(command -v zoxide)" ]; then
+    export _ZO_FZF_OPTS="
+        $FZF_DEFAULT_OPTS
+        --exact
+        --no-sort
+        --keep-right
+        --height=50%
+        --exit-0
+        --preview='eza -1 --group-directories-first --icons=auto --color=always {2..}'
+    "
     eval "$(zoxide init --cmd cd zsh)"
 fi

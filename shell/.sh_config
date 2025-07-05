@@ -95,4 +95,9 @@ export FZF_DEFAULT_OPTS='
   --color=bg+:#004B72,hl:#18A2FE,hl+:#18A2FE,info:#707070
   --color=prompt:#19cb00,pointer:#d7005f,marker:#87ff00
   --prompt="❯ " --pointer="❯"
+  --cycle
+  --bind=ctrl-z:ignore,btab:up,tab:down
+  --info=inline
+  --layout=reverse
+  --tabstop=4
 '
