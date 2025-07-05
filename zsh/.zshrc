@@ -59,13 +59,14 @@ bindkey '^[[1;5D' backward-word # fix Ctrl+Left
 bindkey '^?' backward-delete-char # fix annoying vi backspace
 
 # Autocompletion setup
+EZA_PREVIEW="eza -1 --group-directories-first --icons=auto --color=always"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # smartcase
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colors on file completion
 zstyle ':completion:*' menu no  # no default menu (use fzf)
 zstyle ':completion:*:descriptions' format '[%d]' # show completion groups with colors
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --group-directories-first --icons=auto --color=always $realpath'  # fzf for cd w/ eza
+zstyle ':fzf-tab:complete:cd:*' fzf-preview "$EZA_PREVIEW \$realpath"  # fzf for cd w/ eza
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'  # fzf for cd
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --group-directories-first --icons=auto --color=always $realpath'  # fzf for zoxide
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview "$EZA_PREVIEW \$realpath"  # fzf for zoxide
 zstyle ':fzf-tab:*' fzf-bindings 'ctrl-f:accept'
 zstyle ':fzf-tab:*' accept-line enter
 zstyle ':fzf-tab:*' switch-group '<' '>' # switch group using `<` and `>`
@@ -138,7 +139,7 @@ if [ -x "$(command -v zoxide)" ]; then
         --keep-right
         --height=50%
         --exit-0
-        --preview='eza -1 --group-directories-first --icons=auto --color=always {2..}'
+        --preview='$EZA_PREVIEW {2..}'
     "
     eval "$(zoxide init --cmd cd zsh)"
 fi
