@@ -1,4 +1,9 @@
 gui:
+  customIcons:
+    extensions:
+      ".norg":
+        icon: ""
+        color: "#4878BE"
   scrollPastBottom: false
   showFileTree: false
   showNumstatInFilesView: true
