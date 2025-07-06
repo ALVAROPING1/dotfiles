@@ -120,7 +120,6 @@ if ! shopt -oq posix; then
 fi
 
 # Prompt
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # eval "$(oh-my-posh --init --shell bash --config ~/agnoster.omp.json)"
 if [ -x "$(command -v starship)" ]; then
     eval "$(starship init bash)"
