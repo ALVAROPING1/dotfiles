@@ -57,7 +57,10 @@ alias btop='XDG_CONFIG_HOME=$HOME/snap/btop/current/.config/ btop'
 # ║                                    PATH                                    ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-export PATH=~/.local/opt/ghdl/bin/:$PATH # Append `ghdl` binary path
+# Append `ghdl` binary path if it exists
+if [ -d "$HOME/.local/opt/ghdl/bin" ] ; then
+    PATH=$HOME/.local/opt/ghdl/bin:$PATH
+fi
 
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                           ENVIRONMENT VARIABLES                            ║
