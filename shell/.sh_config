@@ -33,7 +33,7 @@ alias diff="delta"
 alias treesize="du"
 alias df="dysk --units=binary"
 alias tree="ls --tree --level 2"
-alias cat="bat --set-terminal-title"
+alias cat="bat"
 alias bathelp="bat --plain --language=help"
 alias vim="nvim.appimage"
 alias fd=fdfind
