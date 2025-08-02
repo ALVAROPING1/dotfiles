@@ -28,6 +28,9 @@
     wrap-max-lines = unlimited
 
     syntax-theme = OneHalfDark
+    map-styles = \
+        bold purple => syntax "#153947", \
+        bold cyan => syntax "#153947"
 
     # Blame
     blame-format = "{timestamp:<15} {author:^15.15} {commit:<8} "
