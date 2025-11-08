@@ -143,3 +143,8 @@ if [ -x "$(command -v zoxide)" ]; then
     "
     eval "$(zoxide init --cmd cd zsh)"
 fi
+
+# git-delta
+if [ -x "$(command -v fastfetch)" ]; then
+    eval "$(delta --generate-completion zsh)"
+fi
