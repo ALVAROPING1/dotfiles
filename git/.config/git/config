@@ -26,6 +26,7 @@
     navigate = true
     dark = true
     wrap-max-lines = unlimited
+    tabs = 4
 
     syntax-theme = OneHalfDark
     map-styles = \
