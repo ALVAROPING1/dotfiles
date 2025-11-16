@@ -3,8 +3,8 @@
 PREFIX="$(readlink -f ~)/.local/opt"
 KITTY_PATH="$PREFIX/kitty.app"
 
-rm -rf "$KITTY_PATH.bak"
-mv "$KITTY_PATH" "$KITTY_PATH.bak"
+rm -rf "$KITTY_PATH.bak" 2> /dev/null | true
+mv "$KITTY_PATH" "$KITTY_PATH.bak" 2> /dev/null | true
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=$PREFIX launch=n
 ln -sf $KITTY_PATH/bin/kitty $KITTY_PATH/bin/kitten ~/.local/bin/
