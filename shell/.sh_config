@@ -49,10 +49,6 @@ batshow() {
     git show "$1" | bat -l "$2"
 }
 
-# Hack to make (snap) btop use the default config directory
-# as it can't access the XDG_CONFIG_HOME directly
-alias btop='XDG_CONFIG_HOME=$HOME/snap/btop/current/.config/ btop'
-
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                                    PATH                                    ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
