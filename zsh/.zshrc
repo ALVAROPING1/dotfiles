@@ -18,7 +18,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load completions on startup
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 zinit cdreplay -q
 
 # zsh plugins

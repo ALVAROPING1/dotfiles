@@ -8,8 +8,8 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-if [ -f ~/.env ]; then
-    . ~/.env
+if [ -f $HOME/.env ]; then
+    . $HOME/.env
 fi
 
 # if running bash
