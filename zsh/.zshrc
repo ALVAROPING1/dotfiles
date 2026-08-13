@@ -87,6 +87,9 @@ check_terminal_size () {
 check_terminal_size
 trap 'check_terminal_size' WINCH # Executes a command when the signal is received
 
+# Generic
+setopt auto_param_slash  # When a dir is completed, add a / instead of a trailing space
+
 # History
 HISTSIZE=5000
 HISTFILE="${XDG_STATE_HOME}"/zsh/history
