@@ -145,6 +145,6 @@ if [ -x "$(command -v zoxide)" ]; then
 fi
 
 # git-delta
-if [ -x "$(command -v fastfetch)" ]; then
+if [ -x "$(command -v delta)" ]; then
     eval "$(delta --generate-completion zsh)"
 fi
