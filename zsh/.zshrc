@@ -1,7 +1,24 @@
+# Time function for benchmarking
+# delta-t() {
+#     local now diff
+#     now=$(date +%s%N)
+#
+#     if [[ -n ${_delta_last:-} ]]; then
+#         diff=$((now - _delta_last))
+#         printf '%s:\t%d.%03d ms\n' $1 $((diff / 1000000)) $((diff % 1000000 / 1000))
+#     fi
+#
+#     _delta_last=$now
+# }
+
+# delta-t
+
 # Load environment variables
 if [ -f ~/.env ]; then
     . ~/.env
 fi
+
+# delta-t "Env variables"
 
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                                  PLUGINS                                   ║
@@ -18,20 +35,21 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load completions on startup
-autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
-zinit cdreplay -q
+autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION" -C
 
 # zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit ice lucid nocompile; zinit load MenkeTechnologies/zsh-cargo-completion
-if [ -x "$(command -v fzf)" ]; then
+if (( $+commands[fzf] )); then
    zinit light Aloxaf/fzf-tab
 fi
 
 # Snippets
 zinit snippet OMZP::command-not-found
+
+# delta-t "Plugins"
 
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                                   CONFIG                                   ║
@@ -101,37 +119,43 @@ alias -g documents=~/Documentos
 alias -g pictures=~/Imágenes
 alias -g videos=~/Vídeos
 
+# delta-t "zsh config"
+
 # Generic shell config
 if [ -f ~/.sh_config ]; then
     . ~/.sh_config
 fi
 
+# delta-t "shell config"
+
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                                   PROMPT                                   ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-if [ -x "$(command -v starship)" ]; then
+if (( $+commands[starship] )); then
     eval "$(starship init zsh)"
 fi
+
+# delta-t "Prompt"
 
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║                             SHELL INTEGRATIONS                             ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
 # fzf
-if [ -x "$(command -v fzf)" ]; then
+if (( $+commands[fzf] )); then
     # eval "$(fzf --zsh)" # requires newer version
     source /usr/share/doc/fzf/examples/key-bindings.zsh
     source /usr/share/doc/fzf/examples/completion.zsh
 fi
 
 # Fastfetch
-if [ -x "$(command -v fastfetch)" ]; then
+if (( $+commands[fastfetch] )); then
     fastfetch
 fi
 
 # zoxide
-if [ -x "$(command -v zoxide)" ]; then
+if (( $+commands[zoxide] )); then
     export _ZO_FZF_OPTS="
         $FZF_DEFAULT_OPTS
         --exact
@@ -145,6 +169,9 @@ if [ -x "$(command -v zoxide)" ]; then
 fi
 
 # git-delta
-if [ -x "$(command -v delta)" ]; then
+if (( $+commands[delta] )); then
     eval "$(delta --generate-completion zsh)"
 fi
+
+# delta-t "Integrations"
+
