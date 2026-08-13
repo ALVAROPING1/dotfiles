@@ -11,10 +11,10 @@ it beforehand, although it's only loaded when detected.
 
 ## Plugins
 
-The plugin manager is [Zinit](https://github.com/zdharma-continuum/zinit), with
-the following plugins:
+The plugin manager is [antidote](https://antidote.sh/), with the following plugins:
 
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+- [mattmc3/ez-compinit](https://github.com/mattmc3/ez-compinit)
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
@@ -22,7 +22,8 @@ the following plugins:
 
 ### Oh-my-zsh plugins
 
-Although I don't use omz (too slow), Zinit allows us to take advantage of [its plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins):
+Although I don't use omz (too slow), antidote allows us to take advantage of
+[its plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins):
 
 - [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
 
@@ -33,3 +34,5 @@ They are only enabled when detected.
 
 - [fzf](https://github.com/junegunn/fzf)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [git-delta](https://github.com/dandavison/delta)

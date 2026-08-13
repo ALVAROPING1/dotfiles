@@ -24,30 +24,17 @@ fi
 # ║                                  PLUGINS                                   ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-# zinit (plugin manager)
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# antidote (plugin manager)
+ANTIDOTE_HOME="${ZDOTDIR:-${XDG_DATA_HOME}/.local/share}/.antidote"
 
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+if [ ! -d "$ANTIDOTE_HOME" ]; then
+   mkdir -p "$(dirname $ANTIDOTE_HOME)"
+   git clone --depth=1 https://github.com/mattmc3/antidote.git "$ANTIDOTE_HOME"
 fi
 
-source "${ZINIT_HOME}/zinit.zsh"
+source "${ANTIDOTE_HOME}/antidote.zsh"
 
-# Load completions on startup
-autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION" -C
-
-# zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit ice lucid nocompile; zinit load MenkeTechnologies/zsh-cargo-completion
-if (( $+commands[fzf] )); then
-   zinit light Aloxaf/fzf-tab
-fi
-
-# Snippets
-zinit snippet OMZP::command-not-found
+antidote load
 
 # delta-t "Plugins"
 
@@ -152,6 +139,7 @@ fi
 # Fastfetch
 if (( $+commands[fastfetch] )); then
     fastfetch
+    echo -n "\n\n\n\n" # Fix defer plugins moving the prompt up
 fi
 
 # zoxide
