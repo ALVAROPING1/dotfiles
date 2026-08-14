@@ -14,7 +14,7 @@
 # delta-t
 
 # Load environment variables
-if [ -f ~/.env ]; then
+if [[ -f ~/.env ]]; then
     . ~/.env
 fi
 
@@ -27,7 +27,7 @@ fi
 # antidote (plugin manager)
 ANTIDOTE_HOME="${ZDOTDIR:-${XDG_DATA_HOME}/.local/share}/.antidote"
 
-if [ ! -d "$ANTIDOTE_HOME" ]; then
+if [[ ! -d "$ANTIDOTE_HOME" ]]; then
    mkdir -p "$(dirname $ANTIDOTE_HOME)"
    git clone --depth=1 https://github.com/mattmc3/antidote.git "$ANTIDOTE_HOME"
 fi
@@ -112,7 +112,7 @@ alias -g videos=~/Vídeos
 # delta-t "zsh config"
 
 # Generic shell config
-if [ -f ~/.sh_config ]; then
+if [[ -f ~/.sh_config ]]; then
     . ~/.sh_config
 fi
 
