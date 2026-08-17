@@ -25,7 +25,7 @@ fi
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
 # antidote (plugin manager)
-ANTIDOTE_HOME="${ZDOTDIR:-${XDG_DATA_HOME}/.local/share}/.antidote"
+ANTIDOTE_HOME="$XDG_DATA_HOME/antidote"
 
 if [[ ! -d "$ANTIDOTE_HOME" ]]; then
    mkdir -p "$(dirname $ANTIDOTE_HOME)"
@@ -165,4 +165,3 @@ if (( $+commands[delta] )); then
 fi
 
 # delta-t "Integrations"
-
