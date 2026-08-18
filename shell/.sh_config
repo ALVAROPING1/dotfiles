@@ -62,14 +62,6 @@ fi
 # ║                           ENVIRONMENT VARIABLES                            ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-# Rust toolchain
-export RUSTUP_HOME="${XDG_CONFIG_HOME}/rustup"
-export CARGO_HOME="${XDG_CONFIG_HOME}/cargo"
-
-if [ -f $CARGO_HOME/env ]; then
-    . $CARGO_HOME/env
-fi
-
 # Use bat as the man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c" # fix broken ANSI escape sequences on man pages
