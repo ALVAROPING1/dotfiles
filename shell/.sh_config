@@ -4,7 +4,7 @@
 # ║                                  ALIASES                                   ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-alias ls="eza --color --icons --group-directories-first --hyperlink -h"
+alias ls="eza --color --icons --group-directories-first --hyperlink"
 alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
 
@@ -13,8 +13,8 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
 # Some more ls aliases
-alias ll="ls --all --long --smart-group --git"
 alias la="ls --all"
+alias ll="la --long --smart-group --git --header"
 
 # Quit aliases
 alias :q="exit"
@@ -26,9 +26,13 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# System
+alias clip="xclip -selection clipboard"
+alias open="xdg-open"
+
 # General aliases
 alias mpv="flatpak run io.mpv.Mpv"
-alias du="dust -rx"
+alias du="dust --reverse --limit-filesystem"
 alias diff="delta"
 alias treesize="du"
 alias df="dysk --units=binary"
@@ -40,6 +44,13 @@ alias fd=fdfind
 alias lg=lazygit
 alias autoclick="xdotool click --repeat 10000 --delay 500 1"
 alias latexmk="latexmk --output-directory=build -cd -shell-escape -pdflua"
+alias onefetch="onefetch --no-title --email --no-color-palette --nerd-fonts"
+
+# mk and cd
+mkcd () {
+    mkdir -p "$1"
+    cd "$1"
+}
 
 # Bat commands
 help() {
