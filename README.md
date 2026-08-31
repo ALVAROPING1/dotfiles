@@ -36,6 +36,7 @@ The current supported apps are:
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)
+  - [zoxide](https://github.com/ajeetdsouza/zoxide)
   - [eza](https://github.com/eza-community/eza)
 
   Depends-on:
