@@ -22,6 +22,7 @@ The current supported apps are:
 - `fastfetch`: [fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration
 - `git`: [git](https://git-scm.com/) configuration
 - `gpg`: [GnuPG](https://www.gnupg.org/) configuration
+- `keepassxc`: [KeePassXC](https://keepassxc.org/) configuration
 - `kitty`: [Kitty](https://sw.kovidgoyal.net/kitty/) configuration
 - `lazygit`: [Lazygit](https://github.com/jesseduffield/lazygit) configuration
 - `mpv`: [mpv](https://mpv.io/) configuration
