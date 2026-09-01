@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 gui:
   customIcons:
     extensions:
@@ -14,11 +15,13 @@ gui:
     frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
     rate: 75
   statusPanelView: allBranchesLog
+  shrinkSidePanelsToContent: true
 
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
+  diffRenderers:
+    - command: delta --dark --paging=never
+      colorArg: always
+    # TODO: add difftastic
 
 customCommands:
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#pruning-deleted-remote-branches
