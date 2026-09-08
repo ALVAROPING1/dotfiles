@@ -20,6 +20,7 @@ The current supported apps are:
 - `bat`: [bat](https://github.com/sharkdp/bat) configuration
 - `clangd`: [clangd](https://clangd.llvm.org/) configuration
 - `fastfetch`: [fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration
+- `firefox`: [Firefox](https://www.firefox.com) configuration
 - `git`: [git](https://git-scm.com/) configuration
 - `gpg`: [GnuPG](https://www.gnupg.org/) configuration
 - `keepassxc`: [KeePassXC](https://keepassxc.org/) configuration
