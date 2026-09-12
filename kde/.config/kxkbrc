@@ -1,0 +1,6 @@
+[Layout]
+LayoutList=es
+Model=pc105
+Options=caps:ctrl_modifier
+ResetOldOptions=true
+Use=true

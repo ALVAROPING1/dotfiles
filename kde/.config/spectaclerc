@@ -1,0 +1,12 @@
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+onLaunchAction=DoNotTakeScreenshot
+rememberLastRectangularRegion=0
+useReleaseToCapture=true
+
+[GuiConfig]
+captureMode=5
+
+[Save]
+lastSaveLocation=file:///home/alvaro/Imágenes/Screenshot_20260909_002104.png

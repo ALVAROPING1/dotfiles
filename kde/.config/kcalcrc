@@ -1,0 +1,6 @@
+[General]
+CalculatorMode=science
+ShowHistory=true
+
+[Grouping]
+binaryGrouping=8

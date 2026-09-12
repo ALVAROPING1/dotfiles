@@ -1,0 +1,31 @@
+MenuBar=Disabled
+
+[DetailsMode]
+ExpandableFolders=false
+PreviewSize=22
+SidePadding=0
+
+[General]
+BrowseThroughArchives=true
+GlobalViewProps=false
+RememberOpenedTabs=false
+Version=202
+ViewPropsTimestamp=2022,1,8,18,25,3.841
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+detailViewIconSize=16
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Open-with settings]
+CompletionMode=1
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=webarchivethumbnail,windowsexethumbnail,ebookthumbnail,jpegthumbnail,windowsimagethumbnail,rawthumbnail,appimagethumbnail,opendocumentthumbnail,imagethumbnail,exrthumbnail,comicbookthumbnail,directorythumbnail,kraorathumbnail,ffmpegthumbs,djvuthumbnail,audiothumbnail,gsthumbnail,svgthumbnail,fontthumbnail,blenderthumbnail

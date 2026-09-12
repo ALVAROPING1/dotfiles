@@ -1,0 +1,10 @@
+[General]
+count=1
+rules=f4db1737-b144-43cb-867e-2c5005859b3e
+
+[f4db1737-b144-43cb-867e-2c5005859b3e]
+Description=Preferencias para osu!.exe
+blockcompositing=true
+blockcompositingrule=2
+wmclass=osu!.exe
+wmclassmatch=1

@@ -1,0 +1,16 @@
+[General]
+FreeFloating=true
+RetainPriorSearch=false
+
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+PIM Contacts Search RunnerEnabled=false
+baloosearchEnabled=false
+browserhistoryEnabled=false
+browsertabsEnabled=false
+krunner_killEnabled=true
+recentdocumentsEnabled=false
+webshortcutsEnabled=false
+windowsEnabled=false
