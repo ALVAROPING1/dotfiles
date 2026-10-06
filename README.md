@@ -38,6 +38,7 @@ The current supported apps are:
   - [dust](https://github.com/bootandy/dust)
   - [dysk](https://github.com/Canop/dysk)
 - `starship`: [starship](https://starship.rs/) configuration
+- `vesktop`: [vesktop](https://vesktop.dev/) configuration
 - `zsh`: [Z-shell](https://www.zsh.org/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)
