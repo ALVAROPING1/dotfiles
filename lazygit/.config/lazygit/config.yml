@@ -17,6 +17,9 @@ gui:
   statusPanelView: allBranchesLog
   shrinkSidePanelsToContent: true
   commitGraphStyle: detailed # Terminal support isn't detected when running within nvim's terminal
+  theme:
+    authorColors:
+      ALVAROPING1: "#468fe4"
 
 git:
   diffRenderers:
