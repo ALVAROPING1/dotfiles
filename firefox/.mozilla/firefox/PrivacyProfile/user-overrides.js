@@ -93,4 +93,7 @@ user_pref("webgl.disabled", true); // Disable WebGL, as it can leak a lot of dat
  * [SETTING] General>Language>Choose your preferred language for displaying pages>Choose>Request English... ***/
 user_pref("privacy.spoof_english", 2);
 
+// Disable new design
+user_pref("browser.nova.enabled", false)
+
 user_pref("_user.js.parrot", "overrides section successful");
