@@ -22,7 +22,6 @@ The current supported apps are:
 - `fastfetch`: [fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration
 - `firefox`: [Firefox](https://www.firefox.com) configuration
 - `git`: [git](https://git-scm.com/) configuration
-- `gpg`: [GnuPG](https://www.gnupg.org/) configuration
 - `kde`: [KDE Plasma](https://kde.org/plasma-desktop/) and related apps configuration
 - `keepassxc`: [KeePassXC](https://keepassxc.org/) configuration
 - `kitty`: [Kitty](https://sw.kovidgoyal.net/kitty/) configuration

@@ -77,20 +77,6 @@ fi
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c" # fix broken ANSI escape sequences on man pages
 
-# GPG
-if [[ -x "$(command -v gpg)" ]]; then
-    export GPG_TTY="$(tty)"
-    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-    export KEYID="0x481282278CCB8230"
-    gpg-connect-agent updatestartuptty /bye > /dev/null
-fi
-restart-gpg-agent() {
-    gpgconf --kill gpg-agent
-    gpg-connect-agent updatestartuptty /bye
-    gpgconf --launch gpg-agent
-}
-alias gpg-change-key='gpg-connect-agent "scd serialno" "learn --force" /bye'
-
 # fzf
 export FZF_DEFAULT_COMMAND="fdfind --type f --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
