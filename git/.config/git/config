@@ -54,7 +54,7 @@
     line-numbers-zero-style = "#808080"
 
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [diff]
     colorMoved = default
