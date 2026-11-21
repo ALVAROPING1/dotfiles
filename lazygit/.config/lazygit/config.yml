@@ -25,7 +25,8 @@ git:
   diffRenderers:
     - command: delta --dark --paging=never
       colorArg: always
-    # TODO: add difftastic
+    - type: extDiff
+      command: difft --color=always --context={{diffContext}}
 
 customCommands:
   # retrieved from: https://github.com/jesseduffield/lazygit/wiki/Custom-Commands-Compendium#pruning-deleted-remote-branches
