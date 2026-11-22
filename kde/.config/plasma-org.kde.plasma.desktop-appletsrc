@@ -53,8 +53,8 @@ DialogWidth=1019
 
 [Containments][2][Applets][25][Configuration][General]
 groupedTaskVisualization=1
-launchers=applications:systemsettings.desktop,applications:org.kde.discover.desktop,preferred://browser,preferred://filemanager,applications:steam.desktop,applications:dev.vencord.Vesktop.desktop
 iconSpacing=0
+launchers=applications:systemsettings.desktop,applications:org.kde.discover.desktop,preferred://browser,preferred://filemanager,applications:steam.desktop,applications:vesktop.desktop
 wheelEnabled=false
 
 [Containments][2][Applets][3]
