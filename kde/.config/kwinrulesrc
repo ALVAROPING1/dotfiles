@@ -1,9 +1,30 @@
+[1aee8919-3e42-46bf-83c1-1c7df719f7d3]
+Description=Disable always below
+belowrule=2
+types=1
+
+[27afffb9-1850-44c2-a774-7bdb4050a732]
+Description=Remember firefox position
+position=0,121
+positionrule=4
+types=1
+wmclass=firefox
+wmclassmatch=1
+
 [General]
-count=1
-rules=f4db1737-b144-43cb-867e-2c5005859b3e
+count=4
+rules=f4db1737-b144-43cb-867e-2c5005859b3e,1aee8919-3e42-46bf-83c1-1c7df719f7d3,ccff8d1c-98a0-4ec1-a7b7-21a6bd7baf37,27afffb9-1850-44c2-a774-7bdb4050a732
+
+[ccff8d1c-98a0-4ec1-a7b7-21a6bd7baf37]
+Description=osu! disable v-sync
+adaptivesyncrule=2
+tearingrule=2
+types=1
+wmclass=osu
+wmclassmatch=2
 
 [f4db1737-b144-43cb-867e-2c5005859b3e]
-Description=Preferencias para osu!.exe
+Description=osu! disable compositor
 blockcompositing=true
 blockcompositingrule=2
 wmclass=osu!.exe

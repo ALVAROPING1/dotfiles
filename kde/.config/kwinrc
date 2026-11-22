@@ -33,9 +33,23 @@ CommandActiveTitlebar2=Minimize
 hide-inactive-bordersEnabled=false
 krohnkiteEnabled=true
 minimizeallEnabled=false
+shakecursorEnabled=false
 slideEnabled=false
 synchronizeskipswitcherEnabled=false
 videowallEnabled=false
+
+[Round-Corners]
+ActiveOutlineUseCustom=false
+ActiveOutlineUsePalette=true
+AnimationDuration=1
+DisableOutlineTile=false
+Exclusions=steam
+InactiveCornerRadius=0
+InactiveOutlineThickness=0
+InactiveSecondOutlineThickness=0
+OutlineThickness=2.5
+SecondOutlineThickness=0
+Size=0
 
 [Script-krohnkite]
 directionalKeyDwm=false
@@ -47,25 +61,52 @@ enableSpreadLayout=false
 enableStairLayout=false
 enableThreeColumnLayout=false
 floatingClass=Kronometer,kcalc,inso
-floatingTitle=Kronometer,KCalc,inso
+floatingTitle=Kronometer,KCalc,inso,Colortune
 ignoreClass=krunner,yakuake,spectacle,kded5,osu!.exe,osu!,kcalc,inso
-ignoreTitle=Steam,OpenTabletDriver,Firefox,osu!,KCalc,inso
+ignoreTitle=Steam,OpenTabletDriver,Firefox,osu!,KCalc,inso,Colortune
+noTileBorder=true
+screenGapBetween=3
+soleWindowNoBorders=true
 tileLayoutGap=5
 
 [TabBox]
 BorderActivate=9
 
-[Tiling]
+[Tiling][2f1fd3b7-42f2-4f1b-9b60-3f7c169cf3b5][6d053a65-dd77-4fdf-9fe0-3d90e5a78e10]
 padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][480cb16d-2e4f-4ebe-ac67-df31c30cdcd9][6d053a65-dd77-4fdf-9fe0-3d90e5a78e10]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][55bd49b2-3518-44a3-b9ea-4ebb0624c22e][6d053a65-dd77-4fdf-9fe0-3d90e5a78e10]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][90dac9b2-d6c9-4f1f-8456-f15213771be2][6d053a65-dd77-4fdf-9fe0-3d90e5a78e10]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][971a0d83-c469-4e70-b332-48ff1e871ffa][6d053a65-dd77-4fdf-9fe0-3d90e5a78e10]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][c044695f-c5e1-5ce4-a711-c2d3fe0402b3]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d86354a3-1b9e-5996-8752-5ea7ec778267]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Windows]
+DelayFocusInterval=0
 RollOverDesktops=true
+
+[Xwayland]
+Scale=1.25
 
 [org.kde.kdecoration2]
 BorderSize=Tiny
 BorderSizeAuto=false
-library=org.kde.bismuth.decoration
-theme=Bismuth
+library=org.kde.breeze
+theme=Brisa

@@ -1,4 +1,7 @@
 [Common]
+OutlineEnabled=false
+OutlineIntensity=OutlineOff
+RoundedCorners=false
 ShadowSize=ShadowNone
 
 [Windeco]
@@ -10,4 +13,4 @@ Enabled=true
 ExceptionPattern=.*
 ExceptionType=0
 HideTitleBar=true
-Mask=0
+Mask=16

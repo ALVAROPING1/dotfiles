@@ -2,13 +2,17 @@ MenuBar=Disabled
 
 [DetailsMode]
 ExpandableFolders=false
+LeftPadding=0
 PreviewSize=22
+RightPadding=0
 SidePadding=0
 
 [General]
 BrowseThroughArchives=true
 GlobalViewProps=false
 RememberOpenedTabs=false
+ShowStatusBar=FullWidth
+ShowZoomSlider=true
 Version=202
 ViewPropsTimestamp=2022,1,8,18,25,3.841
 
@@ -19,7 +23,6 @@ detailViewIconSize=16
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [Open-with settings]
 CompletionMode=1
@@ -28,4 +31,4 @@ CompletionMode=1
 IconSize=32
 
 [PreviewSettings]
-Plugins=webarchivethumbnail,windowsexethumbnail,ebookthumbnail,jpegthumbnail,windowsimagethumbnail,rawthumbnail,appimagethumbnail,opendocumentthumbnail,imagethumbnail,exrthumbnail,comicbookthumbnail,directorythumbnail,kraorathumbnail,ffmpegthumbs,djvuthumbnail,audiothumbnail,gsthumbnail,svgthumbnail,fontthumbnail,blenderthumbnail
+Plugins=appimagethumbnail,blenderthumbnail,audiothumbnail,fontthumbnail,ffmpegthumbs,djvuthumbnail,gsthumbnail,rawthumbnail,directorythumbnail,kraorathumbnail,opendocumentthumbnail,windowsexethumbnail,imagethumbnail,windowsimagethumbnail,exrthumbnail,jpegthumbnail,svgthumbnail,comicbookthumbnail,ebookthumbnail

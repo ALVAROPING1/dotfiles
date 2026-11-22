@@ -8,5 +8,5 @@ useReleaseToCapture=true
 [GuiConfig]
 captureMode=5
 
-[Save]
-lastSaveLocation=file:///home/alvaro/Imágenes/Screenshot_20260909_002104.png
+[ImageSave]
+imageSaveLocation=file:///home/alvaro/Imágenes/
