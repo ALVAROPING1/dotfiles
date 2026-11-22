@@ -166,9 +166,6 @@
             "enabled": false,
             "toolbarDevMenu": true
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "F8Break": {
             "enabled": false
         },
@@ -438,9 +435,9 @@
         "ShikiCodeblocks": {
             "enabled": true,
             "theme": "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/dark-plus.json",
-            "tryHljs": "SECONDARY",
             "useDevIcon": "COLOR",
-            "bgOpacity": 100
+            "bgOpacity": 100,
+            "tryDiscordHighlighter": "SECONDARY"
         },
         "ShowAllMessageButtons": {
             "enabled": false
@@ -634,13 +631,19 @@
         "NoMiddleClickPaste": {
             "enabled": false
         },
-        "TenorGifSearch": {
-            "enabled": false
-        },
         "ConcatenatedComponentExtractor": {
             "enabled": true
         },
         "FixDiscordCss": {
+            "enabled": true
+        },
+        "ExpressionManager": {
+            "enabled": false
+        },
+        "GifProviderSwitcher": {
+            "enabled": false
+        },
+        "BetterYouTubeEmbeds": {
             "enabled": true
         }
     },
@@ -658,7 +661,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1791312149445
+        "settingsSyncVersion": 1795289016572
     },
     "windowsMaterial": "none",
     "nativeTitleBar": false
