@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Open video
 xdg-open "$1" 2> /dev/null
