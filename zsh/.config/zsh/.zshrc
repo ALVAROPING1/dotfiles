@@ -134,9 +134,7 @@ fi
 
 # fzf
 if (( $+commands[fzf] )); then
-    # eval "$(fzf --zsh)" # requires newer version
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-    source /usr/share/doc/fzf/examples/completion.zsh
+    source <(fzf --zsh)
 fi
 
 # Fastfetch

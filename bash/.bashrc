@@ -143,8 +143,7 @@ alias cd="cd >/dev/null" # Don't print folder from cdablevars
 
 # fzf
 if [ -x "$(command -v fzf)" ]; then
-    # eval "$(fzf --bash)" # requires newer version
-    source /usr/share/doc/fzf/examples/key-bindings.bash
+    eval "$(fzf --bash)"
 fi
 
 # Pandoc completion
