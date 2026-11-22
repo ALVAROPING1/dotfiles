@@ -10,6 +10,7 @@ application's config, use `stow <app>`. To install all applications' config, use
 
 The current supported apps are:
 
+- `alacritty`: [Alacritty](https://alacritty.org/) configuration
 - `bash`: [GNU Bash](https://www.gnu.org/software/bash/) configuration  
   Requires:
   - [fzf](https://github.com/junegunn/fzf)

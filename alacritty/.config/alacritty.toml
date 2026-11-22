@@ -1,0 +1,48 @@
+# Get editor completions based on the config schema
+#"$schema" = 'https://raw.githubusercontent.com/distinction-dev/alacritty-schema/main/alacritty/reference.json'
+
+[general]
+live_config_reload = true
+
+[window]
+dynamic_padding = true
+#decorations = "None"
+opacity = 0.85
+
+[scrolling]
+multiplier = 5
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font" }
+size = 13.0
+
+[colors]
+primary = { foreground = "#dddddd", background = "#000000" }
+search.matches = { foreground = "CellForeground", background = "#613315" }
+search.focused_match = { foreground = "CellForeground", background = "#613315" }
+
+[colors.normal]
+black = "#000000"
+red = "#cc0403"
+green = "#19cb00"
+yellow = "#eb6e00"
+blue = "#0d73cc"
+magenta = "#cb1ed1"
+cyan = "#0dcdcd"
+white = "#dddddd"
+
+[colors.bright]
+black = "#767676"
+red = "#f2201f"
+green = "#23fd00"
+yellow = "#ff9800"
+blue = "#1a8fff"
+magenta = "#fd28ff"
+cyan = "#14ffff"
+white = "#ffffff"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+blink_timeout = 15
+thickness = 0.225
