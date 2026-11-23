@@ -4,7 +4,7 @@
 # ║                                  ALIASES                                   ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
-alias ls="eza --color --icons --group-directories-first --hyperlink"
+alias ls="eza --color=always --icons=always --group-directories-first --hyperlink=auto --short-nix"
 alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
 
